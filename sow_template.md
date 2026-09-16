@@ -1,6 +1,6 @@
 # CS 457 Project Statement of Work (SOW) & Protocol Specification Template
 
-**Student Name:** Makaela Maryanski
+**Student Name:** Makaela Maryanski 
 **Date:** 2026-09-16  
 **Course:** CS 457 - Computer Networks  
 **Target Server Domain:** `server.maryanski.edu`  
