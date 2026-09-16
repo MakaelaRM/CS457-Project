@@ -17,15 +17,14 @@
 > - You are encouraged to use python, but I'm not going to make it a strict requirement. The instructor and TA's ability to help with C or Rust, etc will be diminished in other languages.
 
 ### 1.1 Game Overview
-- **Chosen Game:** [e.g., Terminal Trivia, Tic-Tac-Toe, Connect Four, Battleship]
+- **Chosen Game:** Knight Duel (1v1 Tactical Combat)
 - **Player Capacity:** 2 Players (Simulated via 2 CML Client nodes)
-- **Game Summary:** [Briefly describe the gameplay mechanics and rules]
+- **Game Summary:** A turn-based tactical combat game using classic Pokémon-style battle mechanics for a head-to-head Knight fight. Two players command a Knight with base stats (HP, Stamina, Speed) and 4 core actions: Sword Attack (higerh energy/stamina cost but higher damage), Bow Attack (lower speed/stamina cost but lower damage), Block (reduces incoming damage with chance to stun), and Prepare (recovers HP and boosts Speed for future turns).
 
 ### 1.2 Core Game Rules & Win/Draw Conditions
-- **Turn Mechanics:** [Explain how turn order is enforced between Player 1 and Player 2]
-- **Victory Condition:** [Define how a player wins the game]
-- **Draw/Tie Condition:** [Define how a draw/tie is detected and handled]
-
+- **Turn Mechanics:** Both players submit their move choice during a selection phase. The server collects both actions and resolves execution order based on current Knight Speed stats (faster Knight acts first). The server calculates damage, checks for Block, applies stat modifications or healing, and broadcasts the combat log and updated HP meters to both clients via `STATE_UPDATE`.
+- **Victory Condition:** A player wins when the opposing Knight's Health Points (HP) drops to 0.
+- **Draw/Tie Condition:** If both Knights drop to 0 HP on the same turn or if 30 battle rounds elapse without a knockout, the game ends in a draw.
 ---
 
 ## 2. Application-Layer Messaging Protocol Blueprint (Sprint 1 Deliverable)
