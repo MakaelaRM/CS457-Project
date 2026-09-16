@@ -1,4 +1,4 @@
-# CS 457 Project Statement of Work (SOW) & Protocol Specification Template
+# CS 457 Project Statement of Work (SOW) & Protocol Specification
 
 **Student Name:** Makaela Maryanski
 
