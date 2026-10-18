@@ -1,5 +1,9 @@
 # Knight Duel: Concurrency Design
 
+**Student:** Makaela Maryanski  
+**Course:** CS 457  
+**Date:** October 18, 2026
+
 ## 1. Concurrency Model
 
 I chose **Option B: non-blocking I/O multiplexing with `selectors`**. The server is one thread running one event loop. The loop asks the operating system which sockets are ready to read or write, then handles them one at a time. There are no worker threads and no `threading.Lock`.
